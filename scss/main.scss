@@ -12,10 +12,18 @@ body {
 }
 
 .mobile-menu .hamburger-inner {
-    //background-color: var(--brown-nav-hover-no-opacity);
+    background-color: #fff;
     &:after, &:before{
-        //background-color: var(--brown-nav-hover-no-opacity);
+        background-color: #fff;
     }
+}
+
+.mobile-menu .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+    background-color: #fff;
+}
+
+.mobile-menu .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+    background-color: #fff !important;
 }
 
 .nav-container {
@@ -94,13 +102,23 @@ body {
 
 .landing-section {
     padding:0;
+    position: relative;
+    .bg-gradient {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4259278711) 90%, rgba(0, 0, 0, 0.6110819328) 100%);    
+    }
 }
 #landing-slider {
-    height:100vh;
+    //height:100vh;
+    height:700px;
     .bgi {
         background-size: cover;
         width:100vw;
         height:100vh;
+        background-position: center center;
     }
     .text {
         font-size: 86px;
@@ -128,13 +146,17 @@ body {
         margin: 0 auto;
     }
     .load-more {
-        font-family: 'Source Sans Pro';
+        font-family: "Source Sans Pro";
         font-size: 15px;
-        text-align:right;
-        margin-top: -33px;
-        color: #150B04;
-        cursor: pointer;
-
+        text-align: right;
+        color: #150b04;
+        text-decoration: underline;
+        span {
+            &:hover {
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
         &.hide {
             display: none;
         }
@@ -194,7 +216,8 @@ body {
                 height:397px;
                 position: relative;
                 .hover {
-                    display: none;
+                    opacity:0;
+                    transition: all 0.2s;
                     p {
                         position: absolute;
                         top:50%;
@@ -214,6 +237,7 @@ body {
                 }
                 &:hover {
                     .hover {
+                        opacity: 1;
                         display: block;
                         position: absolute;
                         top: 0;
@@ -361,6 +385,8 @@ body {
 
         img {
             height: 100%;
+            margin:0 auto;
+            display: block;
         }
     }
 }
@@ -644,7 +670,8 @@ footer {
         padding-bottom: 0;
 
         .load-more {
-            padding-bottom:80px;
+            font-size: 20px;
+            padding-bottom: 80px;
         }
     }
     .predstavitev-section {
@@ -777,7 +804,7 @@ footer {
 
   @media screen and (max-width: 720px) {  
     #landing-slider .text {
-        font-size:60px;
+        font-size: 54px;
     }
     .lokacija-section .container iframe {
         width:100%;

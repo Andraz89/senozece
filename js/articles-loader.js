@@ -1,6 +1,6 @@
 let articleNum = 6;
 showArticle();
-document.querySelector('.load-more').addEventListener('click',function(){
+document.querySelector('.load-more span').addEventListener('click',function(){
     articleNum = articleNum + 3;
     if(document.querySelectorAll('.article').length <= articleNum) {
         //debugger;
