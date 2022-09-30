@@ -154,8 +154,8 @@ body {
     height:700px;
     .bgi {
         background-size: cover;
-        width:100vw;
-        height:100vh;
+        width:auto;
+        height:700px;
         background-position: center center;
     }
     .text {
@@ -264,6 +264,7 @@ body {
                         color:#fff;
                         font-family: 'Source Sans Pro', sans-serif;
                         font-size: 15px;
+                        pointer-events: none;
                     }
                     a {
                         position: absolute;
@@ -891,8 +892,17 @@ footer {
   }
 
   @media screen and (max-width: 720px) {  
+    #landing-slider {
+        height:100vh;
+    } 
+    #landing-slider .bgi {
+        height: 100vh;
+    }
+    #landing-slider .left-margin {
+        margin-left:0;
+    }
     #landing-slider .text {
-        font-size: 54px;
+        font-size: 44px;
     }
     .lokacija-section .container iframe {
         width:100%;

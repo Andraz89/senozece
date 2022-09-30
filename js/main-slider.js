@@ -121,7 +121,7 @@ if(document.querySelectorAll('#landing-slider').length > 0) {
       if (mouseOver) return
       timeout = setTimeout(() => {
         slider.next()
-      }, 2000)
+      }, 20000)
     }
     slider.on("created", () => {
       slider.container.addEventListener("mouseover", () => {
